@@ -10,7 +10,7 @@ namespace azure_hol_functions
     public static class Function2
     {
         [FunctionName("Function2")]
-        [return: Table("tbl527ed", Connection = "StorageConnectionAppSetting")]
+        [return: Table("<TABLE>", Connection = "StorageConnectionAppSetting")]
         public static SampleData Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
         HttpRequest req,
@@ -20,14 +20,12 @@ namespace azure_hol_functions
 
             string name = req.Query["name"];
 
-            var sd = new SampleData()
+            return new SampleData()
             {
                 PartitionKey = "Http",
                 RowKey = Guid.NewGuid().ToString(),
                 Text = name
             };
-
-            return sd;
         }
     }
 

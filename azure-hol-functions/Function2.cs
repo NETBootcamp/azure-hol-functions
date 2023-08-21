@@ -10,7 +10,7 @@ namespace azure_hol_functions
     public static class Function2
     {
         [FunctionName("Function2")]
-        [return: Table("<TABLE>", Connection = "StorageConnectionAppSetting")]
+        [return: Table("tbl527ed", Connection = "StorageConnectionAppSetting")]
         public static SampleData Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
         HttpRequest req,

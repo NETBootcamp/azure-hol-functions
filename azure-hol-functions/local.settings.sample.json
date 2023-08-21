@@ -2,7 +2,6 @@
     "IsEncrypted": false,
     "Values": {
         "APPINSIGHTS_INSTRUMENTATIONKEY": "<INTRUMENTATION_KEY>",
-        "AzureWebJobsSecretStorageType": "Files",
         "FUNCTIONS_WORKER_RUNTIME": "dotnet",
         "StorageConnectionAppSetting": "<KEY1_CONNECTION_STRING>"
     }
